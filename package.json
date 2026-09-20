@@ -1,0 +1,24 @@
+{
+  "name": "vivo-y3",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vivo-y3.js",
+  "module": "./dist/vivo-y3.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vivo-y3.js"
+    }
+  },
+  "sideEffects": true,
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  }
+}
