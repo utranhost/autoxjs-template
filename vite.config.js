@@ -11,6 +11,7 @@ function toEs5() {
       const { code: out } = transformSync(code, {
         babelrc: false,
         configFile: false,
+        comments: false,
         presets: [['@babel/preset-env', { targets: { ie: '11' }, modules: false }]],
         compact: false,
       })
@@ -22,7 +23,7 @@ function toEs5() {
 export default defineConfig({
   build: {
     target: 'es2015',
-    // 压缩会重新引入模板字符串等 ES6 语法，这里关闭压缩，产物保持可读
+    // 压缩会把字符串拼接重新优化成模板字符串等 ES6 语法，注释由 Babel 在降级时一并去掉
     minify: false,
     lib: {
       entry: resolve(import.meta.dirname, 'src/index.js'),
