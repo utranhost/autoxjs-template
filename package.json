@@ -19,6 +19,8 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@babel/core": "^8.0.6",
+    "@babel/preset-env": "^8.0.6",
     "vite": "^8.3.0"
   }
 }
